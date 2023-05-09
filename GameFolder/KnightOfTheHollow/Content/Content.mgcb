@@ -25,6 +25,18 @@
 /processorParam:TextureFormat=Color
 /build:New Piskel (1).gif;Hero.gif
 
+#begin New Piskel.gif
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:New Piskel.gif;Test.gif
+
 #begin spritesheet.png
 /importer:TextureImporter
 /processor:TextureProcessor

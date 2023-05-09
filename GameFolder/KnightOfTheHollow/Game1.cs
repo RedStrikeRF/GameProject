@@ -35,34 +35,23 @@ namespace KnightOfTheHollow
 
             var heroTextures = Content.Load<Texture2D>("Hero");
             var monstersTextures = Content.Load<Texture2D>("Hero");//было monsters
-            
+            var Test = Content.Load<Texture2D>("Test");
+
             _sprites = new List<Sprites>()
-            {
-                new Sprites(heroTextures)
+            {   
+                new Sprites(Test)
                 {
-                    _position = new Vector2(100,0),
+                    Position = new Vector2(0,0),
                     Input = new Input()
                     {
-                        Jump = Keys.Space,
-                        Down = Keys.LeftControl,
-                        Left = Keys.A,
-                        Right = Keys.D,
-                        Attack = Keys.LeftAlt,
-                        Shift = Keys.Tab
-                    }
-                },
-                new Sprites(monstersTextures)
-                {
-                     _position = new Vector2(200,0),
-                    Input = new Input()
-                    {
-                        Jump = Keys.Up,
+                        Up = Keys.Up,
                         Down = Keys.Down,
                         Left = Keys.Left,
-                        Right = Keys.Right,
-                        Attack = Keys.RightAlt,
-                        Shift = Keys.RightControl
-                    }
+                        Right = Keys.Right//,
+                        //Attack = Keys.RightAlt,
+                        //Shift = Keys.RightControl
+                    },
+                    OriginPosition = new Vector2(16,10),//Texture. тоже можно использовать
                 }
             };
 

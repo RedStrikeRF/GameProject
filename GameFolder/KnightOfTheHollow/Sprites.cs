@@ -1,15 +1,22 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+using System;
 namespace KnightOfTheHollow
 {
     internal class Sprites
     {
         private Texture2D _texture;
         public Input Input;
-        public Vector2 _position;
+        public Vector2 Position;
+        public Vector2 OriginPosition;
+        
+        public float Rotation;
+
         public float Speed = 2f;
+        public float RotationVelocity = 3f;
+        public float LinearVelocity = 4f;
+
         public Sprites(Texture2D texture)
         {
             _texture = texture;
@@ -18,43 +25,45 @@ namespace KnightOfTheHollow
         public void Update()
         {
             Move();
-            Fight();
+            //Fight();
         }
         private void Move()
-        {
+        {   
+            
             if (Input == null)
                 return;
-            if (Keyboard.GetState().IsKeyDown(Input.Left))
-            {
-                _position.X -= Speed;
+            //поворот осуществляется по часовой стрелке где:
+            //0 часов - 0 градусов
+            //3 часа - 90 градусов
+            //6 часов - 180 градусов
+            //9 часов - 270 градусов
+            //X - смотрится по горизонтали сверху вниз
+            //Y - по вертикали сверху вниз
+            if (Keyboard.GetState().IsKeyDown(Input.Up))
+            {   
+                Rotation = MathHelper.ToRadians(0);
+                Position.Y -= Speed;
             }
             if (Keyboard.GetState().IsKeyDown(Input.Right))
             {
-                _position.X += Speed;
+                Rotation = MathHelper.ToRadians(90);
+                Position.X += Speed;
             }
             if (Keyboard.GetState().IsKeyDown(Input.Down))
             {
-                _position.Y += Speed;
+                Rotation = MathHelper.ToRadians(180);
+                Position.Y += Speed;
             }
-            if (Keyboard.GetState().IsKeyDown(Input.Jump))
+            if (Keyboard.GetState().IsKeyDown(Input.Left))
             {
-                _position.Y -= Speed;
+                Rotation = MathHelper.ToRadians(270);
+                Position.X -= Speed;
             }
         }
-        private void Fight()
-        {
-            if (Keyboard.GetState().IsKeyDown(Input.Attack))
-            {
-                _position.Y -= Speed*10;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Shift))
-            {
-                _position.X -= Speed*20;
-            }
-        }
+
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            spriteBatch.Draw(_texture, Position, null,  Color.White, Rotation, OriginPosition,1, SpriteEffects.None, 0f);
         }
     }
 }

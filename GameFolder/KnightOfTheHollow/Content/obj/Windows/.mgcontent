@@ -5,10 +5,12 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/User/Pictures/проекторий/GITHUB/GameProject/GameFolder/KnightOfTheHollow/Content/New Piskel (1).gif</File>
+    <File>C:/Users/User/Pictures/проекторий/GITHUB/GameProject/GameFolder/KnightOfTheHollow/Content/New Piskel.gif</File>
     <File>C:/Users/User/Pictures/проекторий/GITHUB/GameProject/GameFolder/KnightOfTheHollow/Content/spritesheet.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Hero.gif</File>
+    <File>Test.gif</File>
     <File>monsters.png</File>
   </DestFiles>
 </SourceFileCollection>

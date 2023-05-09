@@ -37,3 +37,4 @@ C:\Users\User\Pictures\проекторий\GITHUB\GameProject\GameFolder\Knight
 C:\Users\User\Pictures\проекторий\GITHUB\GameProject\GameFolder\KnightOfTheHollow\obj\Debug\net6.0-windows\ref\KnightOfTheHollow.dll
 C:\Users\User\Pictures\проекторий\GITHUB\GameProject\GameFolder\KnightOfTheHollow\bin\Debug\net6.0-windows\Content\monsters.xnb
 C:\Users\User\Pictures\проекторий\GITHUB\GameProject\GameFolder\KnightOfTheHollow\bin\Debug\net6.0-windows\Content\Hero.xnb
+C:\Users\User\Pictures\проекторий\GITHUB\GameProject\GameFolder\KnightOfTheHollow\bin\Debug\net6.0-windows\Content\Test.xnb
